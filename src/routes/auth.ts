@@ -12,7 +12,7 @@ import {
 import { authenticateToken } from '../middleware/authMiddleware';
 import { PrismaClient } from '@prisma/client';
 import bcrypt from 'bcryptjs';
-import { generateToken } from '@/middleware/auth';
+import { generateToken } from '../middleware/auth';
 
 const router = Router();
 const prisma = new PrismaClient();

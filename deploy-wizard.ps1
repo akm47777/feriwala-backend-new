@@ -193,7 +193,7 @@ Write-Host "1. Update your frontend with the new API URL" -ForegroundColor White
 Write-Host "2. Set up monitoring (recommended):" -ForegroundColor White
 Write-Host "   https://uptimerobot.com" -ForegroundColor Gray
 Write-Host "3. Configure custom domain (optional):" -ForegroundColor White
-Write-Host "   Render Dashboard > Settings > Custom Domains" -ForegroundColor Gray
+Write-Host "   Render Dashboard - Settings - Custom Domains" -ForegroundColor Gray
 Write-Host ""
-Write-Host "Deployment wizard complete! 🚀" -ForegroundColor Green
+Write-Host "Deployment wizard complete!" -ForegroundColor Green
 Write-Host ""
