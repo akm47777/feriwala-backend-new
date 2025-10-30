@@ -6,8 +6,8 @@
   "scripts": {
     "dev": "nodemon -r tsconfig-paths/register src/index.ts",
     "dev:ws": "nodemon -r tsconfig-paths/register src/websocket/server.ts",
-    "build": "npx prisma generate && tsc",
-    "start": "node dist/index.js",
+    "build": "npx prisma generate && tsc && tsc-alias",
+    "start": "node -r module-alias/register dist/index.js",
     "start:prod": "NODE_ENV=production node dist/index.js",
     "start:ws": "node dist/websocket/server.js",
     "lint": "eslint src/**/*.ts",
@@ -55,6 +55,17 @@
     "winston": "^3.11.0",
     "ws": "^8.16.0",
     "xlsx": "^0.18.5"
+  },
+  "_moduleAliases": {
+    "@": "dist",
+    "@/config": "dist/config",
+    "@/controllers": "dist/controllers",
+    "@/middleware": "dist/middleware",
+    "@/models": "dist/models",
+    "@/routes": "dist/routes",
+    "@/services": "dist/services",
+    "@/utils": "dist/utils",
+    "@/types": "dist/types"
   },
   "devDependencies": {
     "@types/bcryptjs": "^2.4.6",
