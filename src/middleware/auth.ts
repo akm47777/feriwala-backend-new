@@ -13,6 +13,10 @@ export interface AuthRequest extends Request {
     firstName: string;
     lastName: string;
   };
+  headers: any;
+  params: any;
+  body: any;
+  query: any;
 }
 
 // JWT secret from environment

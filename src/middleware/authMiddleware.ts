@@ -8,6 +8,10 @@ export interface AuthRequest extends Request {
     email: string;
     role: UserRole;
   };
+  headers: any;
+  params: any;
+  body: any;
+  query: any;
 }
 
 /**
