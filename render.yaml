@@ -2,8 +2,11 @@ services:
   - type: web
     name: feriwala-backend
     env: node
+    plan: free
     buildCommand: npm install && npm run build
     startCommand: npm start
+    healthCheckPath: /api/health
+    autoDeploy: true
     envVars:
       - key: NODE_ENV
         value: production
