@@ -10,20 +10,42 @@ services:
       - key: PORT
         value: 8080
       - key: DATABASE_URL
-        sync: false # Will be set in Render dashboard
+        sync: false
       - key: JWT_SECRET
-        generateValue: true
+        value: feriwala-production-jwt-secret-key-2025
       - key: JWT_REFRESH_SECRET
-        generateValue: true
+        value: feriwala-production-refresh-jwt-secret-key-2025
       - key: JWT_EXPIRE
         value: 7d
       - key: JWT_REFRESH_EXPIRE
         value: 30d
+      - key: REDIS_URL
+        value: redis://localhost:6379
       - key: SMTP_HOST
         value: smtp.zoho.in
       - key: SMTP_PORT
         value: 587
       - key: SMTP_USER
-        sync: false # Will be set in Render dashboard
-      - key: SMTP_PASS
-        sync: false # Will be set in Render dashboard
+        value: verify@feriwala.in
+      - key: SMTP_PASSWORD
+        sync: false
+      - key: OTP_EXPIRE_MINUTES
+        value: 5
+      - key: MAX_OTP_ATTEMPTS
+        value: 3
+      - key: FRONTEND_URL
+        value: https://www.feriwala.in
+      - key: CORS_ORIGIN
+        value: https://feriwala.in,https://www.feriwala.in
+      - key: BACKEND_URL
+        value: https://www.feriwala.in/api
+      - key: RATE_LIMIT_WINDOW_MS
+        value: 900000
+      - key: RATE_LIMIT_MAX_REQUESTS
+        value: 100
+      - key: BCRYPT_SALT_ROUNDS
+        value: 12
+      - key: SESSION_SECRET
+        value: feriwala-session-secret-2025
+      - key: LOG_LEVEL
+        value: info
